@@ -7,3 +7,5 @@ class Gallery(models.Model):
     title = models.CharField(blank=True, max_length=500)
     picture = models.ImageField(blank=False, null=False, upload_to='gallery')
     description = models.TextField(blank=True)
+    show_in_slider = models.BooleanField(blank=True, null=True, default=False)
+    show_on_main_page = models.BooleanField(blank=True, null=True, default=False)

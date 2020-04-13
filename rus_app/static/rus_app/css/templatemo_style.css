@@ -280,9 +280,9 @@ h6 {
 }
 
 .section-title {
-    border-top: 1px solid #e1e6e9;
+    /*border-top: 1px solid #e1e6e9;*/
     margin-top: 60px;
-    padding-top: 60px;
+    /*padding-top: 60px;*/
     padding-bottom: 60px;
     text-transform: uppercase;
     font-weight: 600;
@@ -438,9 +438,11 @@ h6 {
     margin-top: -1px;
     position: relative;
 }
-/*#bx-pager {*/
-/*    width: max-content;*/
-/*}*/
+
+#bx-pager {
+    width: max-content;
+}
+
 .caption-wrapper {
     position: relative;
 }
@@ -452,6 +454,12 @@ h6 {
     background-color: white;
     display: inline-block;
     right: 0;
+}
+
+.carousel {
+    width: 1110px;
+    margin: 0 auto;
+    padding-top: 100px;
 }
 
 .slider-caption h2 {
@@ -688,6 +696,22 @@ h6 {
     font-weight: 600;
 }
 
+.card {
+    overflow: hidden;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card img {
+    transition: all 1.5s ease;
+}
+
+.card-img-top {
+    cursor: pointer;
+}
+
 /* ==========================================================================
     Contact Styling
    ========================================================================== */
@@ -760,10 +784,16 @@ ul.social li a {
     display: inline-block;
 }
 
+.menu-burger {
+    width: 50%;
+}
+
 /*------------------------------------------------------
 	RESPONSIVE STYLES 
 --------------------------------------------------------*/
 @media (max-width: 991px) {
+
+
     .main-menu, .bx-thumbnail-wrapper {
         display: none;
     }
@@ -774,6 +804,10 @@ ul.social li a {
 
     .site-header .container {
         padding: 0;
+    }
+
+    .carousel {
+        width: 720px;
     }
 
     .slider-caption {
@@ -820,6 +854,10 @@ ul.social li a {
 }
 
 @media (max-width: 767px) {
+    .carousel {
+        width: 100%;
+    }
+
     .section-title {
         font-size: 24px;
     }
@@ -839,5 +877,14 @@ ul.social li a {
     #templatemo_logo h1 a {
         opacity: 0;
         filter: alpha(opacity=0);
+    }
+}
+
+@media (max-width: 575px) {
+    .logo, .menu-burger {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
