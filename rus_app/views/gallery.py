@@ -7,12 +7,12 @@ def gallery(request):
     return JsonResponse(dict(
         gallery=[
             dict(
-                id=pic.id,
-                picture=request.build_absolute_uri(pic.picture.url),
-                title=pic.title,
-                description=pic.description,
-                show_on_main_page=pic.show_on_main_page,
-                show_in_slider=pic.show_in_slider,
-            ) for pic in gallery_list
+                id=item.id,
+                picture=request.build_absolute_uri(item.picture.url),
+                title=item.title,
+                description=item.description,
+                show_on_main_page=item.show_on_main_page,
+                show_in_slider=item.show_in_slider,
+            ) for item in gallery_list
         ]
     ))

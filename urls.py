@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.urls import path
 from django.contrib import admin
+from rus_app.views.blog import blog
 from rus_app.views.gallery import gallery
 from rus_app.views.index import index
 from django.conf.urls.static import static
@@ -24,5 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('gallery/', gallery, name='gallery'),
+    path('blog/', blog, name='blog'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

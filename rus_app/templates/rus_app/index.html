@@ -187,80 +187,16 @@
         </div> <!-- /.row -->
         <div class="row" style="padding-left: 15px; padding-right: 15px;">
             <div class="card-columns">
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="http://127.0.0.1:8000/media/gallery/1528373792494.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p>Last updated 3 mins ago</p>
+                {% for item in blog %}
+                    <div class="card bg-dark text-white">
+                        <img class="card-img" src="{{ item.picture }}" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">{{ item.title }}</h5>
+                            <p class="card-text">{{ item.preview_text }}</p>
+                            <p>{{ item.last_updated}}</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="http://127.0.0.1:8000/media/gallery/1528373792494.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p>Last updated 3 mins ago</p>
-                    </div>
-                </div>
-
-
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="http://127.0.0.1:8000/media/gallery/1528373792494.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p>Last updated 3 mins ago</p>
-                    </div>
-                </div>
-
-
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="http://127.0.0.1:8000/media/gallery/1528373792494.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p>Last updated 3 mins ago</p>
-                    </div>
-                </div>
-
-
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="http://127.0.0.1:8000/media/gallery/1528373792494.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p>Last updated 3 mins ago</p>
-                    </div>
-                </div>
-
-
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="http://127.0.0.1:8000/media/gallery/1528373792494.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p>Last updated 3 mins ago</p>
-                    </div>
-                </div>
-
-
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="http://127.0.0.1:8000/media/gallery/1528373792494.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p>Last updated 3 mins ago</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
 
         </div> <!-- /.row -->
@@ -277,14 +213,10 @@
         </div> <!-- /.row -->
         <div class="row">
             <div class="col-md-offset-2 col-md-8 text-center bigger-text">
-                <p>Quisque egestas, dui accumsan bibendum semper, eros metus iaculis orci, in fermentum sapien magna
-                    quis turpis. Vestibulum ante ipsum primis.</p>
+                <p>Если желаете связаться, заполните форму</p>
             </div>
-            <div class="col-md-6 col-sm-6">
-                <div id="map">
-                </div>
-            </div> <!-- /.col-md-6 -->
-            <div class="col-md-6 col-sm-6">
+
+            <div class="col-md-offset-2 col-md-8 text-center">
 
                 <div class="row contact-form">
 
