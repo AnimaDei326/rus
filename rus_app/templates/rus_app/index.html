@@ -80,17 +80,17 @@
 <div style="background-color: #161616;">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            {% for picture in gallery %}
+            {% for item in gallery %}
                 <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
-                    <img class="d-block w-100" src="{{ picture.picture }}" alt="First slide">
+                    <img class="d-block w-100" src="{{ item.picture.url }}" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
 
-                        {% if picture.title %}
-                            <h5>{{ picture.title }}</h5>
+                        {% if item.picture.title %}
+                            <h5>{{ item.picture.title }}</h5>
                         {% endif %}
 
-                        {% if picture.description %}
-                            <p>{{ picture.description }}</p>
+                        {% if item.picture.description %}
+                            <p>{{ item.picture.description }}</p>
                         {% endif %}
 
                     </div>
@@ -154,23 +154,24 @@
             <div class="col-md-12 text-center">
                 <h1 class="section-title">Галерея</h1>
             </div> <!-- /.col-md-12 -->
+            <div class="col-md-12 text-left">
+                <a href=""><h4>Все альбомы /</h4></a>
+            </div>
         </div> <!-- /.row -->
         <div class="row" style="padding-left: 15px; padding-right: 15px;">
             <div class="card-columns">
-                {% for item in gallery %}
-                    {% if item.show_on_main_page %}
-                        <div class="card">
-                            <img class="card-img-top" src="{{ item.picture }}" alt="Card image cap">
-                            <div class="card-body">
-                                {% if item.title %}
-                                    <h5 class="card-title">{{ item.title }}</h5>
-                                {% endif %}
-                                {% if item.description %}
-                                    <p class="card-text">{{ item.description }}</p>
-                                {% endif %}
-                            </div>
-                        </div>
-                    {% endif %}
+                {% for item in topic %}
+                    <div class="card">
+                        <img class="card-img" src="{{ item.url }}" alt="Card image cap">
+{#                        <div class="card-body">#}
+                            {% if item.title %}
+                                <h5 class="card-title">{{ item.title }}</h5>
+                            {% endif %}
+{#                            {% if item.description %}#}
+{#                                <p class="card-text">{{ item.description }}</p>#}
+{#                            {% endif %}#}
+{#                        </div>#}
+                    </div>
                 {% endfor %}
             </div>
         </div> <!-- /.row -->
@@ -193,7 +194,7 @@
                         <div class="card-img-overlay">
                             <h5 class="card-title">{{ item.title }}</h5>
                             <p class="card-text">{{ item.preview_text }}</p>
-                            <p>{{ item.last_updated}}</p>
+                            <p>{{ item.last_updated }}</p>
                         </div>
                     </div>
                 {% endfor %}

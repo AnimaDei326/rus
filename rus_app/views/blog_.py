@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from ..models.blog import Blog
 
 
-def blog(request):
+def blog_(request):
     blog_list = Blog.objects.filter(active=True).order_by('sort')
     return JsonResponse(dict(
         blog=[

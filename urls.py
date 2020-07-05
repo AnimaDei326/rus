@@ -16,15 +16,19 @@ Including another URLconf
 from django.conf import settings
 from django.urls import path
 from django.contrib import admin
-from rus_app.views.blog import blog
-from rus_app.views.gallery import gallery
+from rus_app.views.blog_ import blog_
+from rus_app.views.gallery_ import gallery_
+from rus_app.views.topic_ import topic_
+from rus_app.views.topic import topic
 from rus_app.views.index import index
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('gallery/', gallery, name='gallery'),
-    path('blog/', blog, name='blog'),
+    path('gallery_/', gallery_, name='gallery_'),
+    path('blog_/', blog_, name='blog_'),
+    path('topic_/<str:code>/', topic_, name='topic_'),
+    path('topic/<str:code>/', topic, name='topic'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

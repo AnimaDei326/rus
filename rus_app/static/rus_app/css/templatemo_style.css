@@ -697,7 +697,12 @@ h6 {
 }
 
 .card {
+    /*overflow: hidden;*/
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
+    transition: box-shadow .3s ease-in-out;
 }
 
 .card:hover img {
@@ -712,23 +717,50 @@ h6 {
     cursor: pointer;
 }
 
-.card.bg-dark.text-white::before{
+.card-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.card.bg-dark.text-white::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
     z-index: 10;
     pointer-events: none;
 }
-.bg-dark .card-title, .bg-dark .card-text{
+
+.bg-dark .card-title, .bg-dark .card-text {
     font-weight: 700;
 }
-.card-img-overlay{
+
+.card-img-overlay {
     z-index: 20;
     top: inherit !important;
+}
+
+.card-title {
+    margin: 0;
+    padding: 20px 24px;
+    display: flex;
+    align-items: flex-end;
+    font-family: devioussans02extrabold, Helvetica Neue, Helvetica, Arial, メイリオ\, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 1.22;
+    letter-spacing: .3px;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 /* ==========================================================================
@@ -805,6 +837,51 @@ ul.social li a {
 
 .menu-burger {
     width: 50%;
+}
+
+.topic {
+    padding: 100px 15px 0 15px;
+}
+
+.topic-main-img {
+    overflow: hidden;
+    position: relative;
+}
+
+.all-topic-link:hover {
+    color: white;
+}
+
+.all-topic-link {
+    margin-left: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    color: gray;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    outline: none;
+    font-family: devioussans02bold, Helvetica Neue, Helvetica, Arial, メイリオ\, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .3px;
+    cursor: pointer;
+}
+.arrow {
+    border: solid gray;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 6px;
+    margin-right: 4px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 
 /*------------------------------------------------------
