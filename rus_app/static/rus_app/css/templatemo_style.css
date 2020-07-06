@@ -697,7 +697,6 @@ h6 {
 }
 
 .card {
-    /*overflow: hidden;*/
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -713,15 +712,45 @@ h6 {
     transition: all 1.5s ease;
 }
 
+.card-body-detail {
+    padding: 0 !important;
+}
+
+.card-detail {
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.card-detail:hover img {
+    transform: none !important;
+}
+
+.card-detail img {
+    transition: none !important;
+}
+
 .card {
     cursor: pointer;
+    border-radius: unset !important;
 }
 
 .card-img {
     width: 250px;
+    border-radius: unset !important;
+    /*height: 250px;*/
+    /*object-fit: cover;*/
+    /*object-position: 50% 50%;*/
+}
+
+.card-img, .card-img-detail {
+    /*width: 250px;*/
     height: 250px;
     object-fit: cover;
     object-position: 50% 50%;
+}
+
+.card-img-detail {
+    border-radius: unset !important;
 }
 
 .card.bg-dark.text-white::before {
@@ -745,7 +774,16 @@ h6 {
     top: inherit !important;
 }
 
-.card-title {
+.card-title-detail, .card-text-detail, .card-detail {
+    background-color: #2a2a2a !important;
+    font-family: devioussans02extrabold, Helvetica Neue, Helvetica, Arial, メイリオ\, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif;
+}
+
+.card-text-detail {
+    padding: 10px;
+}
+
+.card-title, .card-title-detail {
     margin: 0;
     padding: 20px 24px;
     display: flex;
@@ -756,11 +794,44 @@ h6 {
     line-height: 1.22;
     letter-spacing: .3px;
     color: white;
-    position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
+}
+
+.card-title {
+    position: absolute;
+}
+
+.topic-title, .topic-description, .card-title-detail, .card-text-detail {
+    color: #b1b1b9;
+}
+
+.topic-texts {
+    margin: 40px 0;
+}
+
+.navigation-link {
+    display: inline-block;
+    margin: 0 0 20px;
+    font-family: devioussans02extrabold, Helvetica Neue, Helvetica, Arial, メイリオ\, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: .3px;
+}
+
+.button-green {
+    background-color: #26b864;
+    border: none;
+    color: white;
+    padding: 20px;
+    font-weight: 400;
+}
+
+.button-green:focus {
+    outline: none;
 }
 
 /* ==========================================================================
@@ -846,6 +917,7 @@ ul.social li a {
 .topic-main-img {
     overflow: hidden;
     position: relative;
+    text-align: center;
 }
 
 .all-topic-link:hover {
@@ -865,11 +937,12 @@ ul.social li a {
     top: 0;
     outline: none;
     font-family: devioussans02bold, Helvetica Neue, Helvetica, Arial, メイリオ\, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 20px;
     letter-spacing: .3px;
     cursor: pointer;
 }
+
 .arrow {
     border: solid gray;
     border-width: 0 1px 1px 0;
@@ -883,6 +956,20 @@ ul.social li a {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 3;
+        display: flex !important;
+        flex-wrap: wrap;
+    }
+
+    .card-columns .card {
+        width: 31.6% !important;
+        margin-right: .75rem;
+    }
+}
+
 
 /*------------------------------------------------------
 	RESPONSIVE STYLES 

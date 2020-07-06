@@ -19,7 +19,9 @@ from django.contrib import admin
 from rus_app.views.blog_ import blog_
 from rus_app.views.gallery_ import gallery_
 from rus_app.views.topic_ import topic_
+from rus_app.views.topics_ import topics_
 from rus_app.views.topic import topic
+from rus_app.views.topics import topics
 from rus_app.views.index import index
 from django.conf.urls.static import static
 
@@ -30,5 +32,7 @@ urlpatterns = [
     path('blog_/', blog_, name='blog_'),
     path('topic_/<str:code>/', topic_, name='topic_'),
     path('topic/<str:code>/', topic, name='topic'),
+    path('topics_/', topics_, name='topics_'),
+    path('topics/', topics, name='topics'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

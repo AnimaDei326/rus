@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-6 logo">
                     <div id="templatemo_logo">
-                        <h1><a href="#">Rustam</a></h1>
+                        <h1><a href="/">Rustam</a></h1>
                     </div> <!-- /.logo -->
                 </div> <!-- /.col-md-4 -->
                 <div class="col-md-8 col-sm-6 col-xs-6 menu-burger">
@@ -154,27 +154,31 @@
             <div class="col-md-12 text-center">
                 <h1 class="section-title">Галерея</h1>
             </div> <!-- /.col-md-12 -->
-            <div class="col-md-12 text-left">
-                <a href=""><h4>Все альбомы /</h4></a>
-            </div>
         </div> <!-- /.row -->
         <div class="row" style="padding-left: 15px; padding-right: 15px;">
             <div class="card-columns">
                 {% for item in topic %}
                     <div class="card">
-                        <img class="card-img" src="{{ item.url }}" alt="Card image cap">
-{#                        <div class="card-body">#}
+                        <a href="/topic/{{ item.code }}/">
+                            <img class="card-img" src="{{ item.url }}" alt="Card image cap">
+                            {#                        <div class="card-body">#}
                             {% if item.title %}
                                 <h5 class="card-title">{{ item.title }}</h5>
                             {% endif %}
-{#                            {% if item.description %}#}
-{#                                <p class="card-text">{{ item.description }}</p>#}
-{#                            {% endif %}#}
-{#                        </div>#}
+                            {#                            {% if item.description %}#}
+                            {#                                <p class="card-text">{{ item.description }}</p>#}
+                            {#                            {% endif %}#}
+                            {#                        </div>#}
+                        </a>
                     </div>
                 {% endfor %}
             </div>
         </div> <!-- /.row -->
+        <div class="col-md-12 text-center">
+            <a href="/topics/">
+                <button class="button-green">Все альбомы</button>
+            </a>
+        </div>
     </div> <!-- /.container -->
 </div> <!-- /#products -->
 

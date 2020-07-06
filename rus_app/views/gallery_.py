@@ -28,6 +28,7 @@ def gallery_(request):
                 id=item.id,
                 url=request.build_absolute_uri(item.picture.url),
                 title=item.title,
+                code=item.code,
                 gallery_list=item.gallery_list
             ) for item in topic_list
         ]
