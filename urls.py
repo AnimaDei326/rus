@@ -16,7 +16,10 @@ Including another URLconf
 from django.conf import settings
 from django.urls import path
 from django.contrib import admin
+from rus_app.views.blogs_ import blogs_
 from rus_app.views.blog_ import blog_
+from rus_app.views.blog import blog
+from rus_app.views.blogs import blogs
 from rus_app.views.gallery_ import gallery_
 from rus_app.views.topic_ import topic_
 from rus_app.views.topics_ import topics_
@@ -29,7 +32,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('gallery_/', gallery_, name='gallery_'),
-    path('blog_/', blog_, name='blog_'),
+    path('blogs_/', blogs_, name='blogs_'),
+    path('blogs/', blogs, name='blogs'),
+    path('blog_/<str:code>/', blog_, name='blog_'),
+    path('blog/<str:code>/', blog, name='blog'),
     path('topic_/<str:code>/', topic_, name='topic_'),
     path('topic/<str:code>/', topic, name='topic'),
     path('topics_/', topics_, name='topics_'),

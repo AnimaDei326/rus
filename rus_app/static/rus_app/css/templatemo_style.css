@@ -283,6 +283,7 @@ h6 {
     /*border-top: 1px solid #e1e6e9;*/
     margin-top: 60px;
     /*padding-top: 60px;*/
+    color: white !important;
     padding-bottom: 60px;
     text-transform: uppercase;
     font-weight: 600;
@@ -702,6 +703,7 @@ h6 {
     flex-wrap: wrap;
     overflow: hidden;
     transition: box-shadow .3s ease-in-out;
+    border: none !important;
 }
 
 .card:hover img {
@@ -913,6 +915,13 @@ ul.social li a {
 .topic {
     padding: 100px 15px 0 15px;
 }
+.blogs{
+    padding-bottom: 200px;
+}
+.page-title{
+    color: white;
+    margin: 40px 0;
+}
 
 .topic-main-img {
     overflow: hidden;
@@ -924,7 +933,7 @@ ul.social li a {
 }
 
 .all-topic-link:hover {
-    color: white;
+    color: whitesmoke;
 }
 
 .all-topic-link {
@@ -933,7 +942,7 @@ ul.social li a {
     margin-top: 15px;
     display: flex;
     align-items: flex-end;
-    color: gray;
+    color: whitesmoke;
     position: absolute;
     left: 0;
     right: 0;
@@ -947,7 +956,7 @@ ul.social li a {
 }
 
 .arrow {
-    border: solid gray;
+    border: solid white;
     border-width: 0 1px 1px 0;
     display: inline-block;
     padding: 3px;

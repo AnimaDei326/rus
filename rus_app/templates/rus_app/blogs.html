@@ -1,27 +1,27 @@
 {% extends 'rus_app/base.html' %}
 {% block content %}
 
-<div class="topic">
+
+<div class="topic blogs">
     <div class="content-section">
         <div class="container">
-
             <div class="row" style="padding-left: 15px; padding-right: 15px;">
-            <h1 class="page-title">Альбомы</h1>
-                {% if topics %}
+            <h1 class="page-title">Блог</h1>
+                {% if blogs %}
                     <div class="card-columns">
-                        {% for item in topics %}
+                        {% for item in blogs %}
                             <div class="card card-detail">
-                                <a href="/topic/{{ item.code }}/">
+                                <a href="/blog/{{ item.code }}/">
                                     {#                                    <a data-fancybox="gallery" href="{{ item.url }}">#}
-                                    <img class="card-img card-img-detail" src="{{ item.url }}"
+                                    <img class="card-img card-img-detail" src="{{ item.picture }}"
                                          alt="{{ item.title }}">
                                     {#                                    </a>#}
                                     {#                                <div class="card-body">#}
                                     {% if item.title %}
                                         <h5 class="card-title-detail">{{ item.title }}</h5>
                                     {% endif %}
-                                    {% if item.description %}
-                                        <p class="card-text-detail">{{ item.description }}</p>
+                                    {% if item.preview_text %}
+                                        <p class="card-text-detail">{{ item.preview_text }}</p>
                                     {% endif %}
                                     {#                                </div>#}
                                 </a>

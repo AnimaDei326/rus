@@ -23,7 +23,7 @@ def gallery_(request):
                     show_in_slider=item.show_in_slider,
                 )) for item in gallery_list
         ],
-        topic=[
+        topics=[
             dict(
                 id=item.id,
                 url=request.build_absolute_uri(item.picture.url),
