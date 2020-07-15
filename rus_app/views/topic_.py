@@ -8,7 +8,6 @@ def topic_(request, code):
         topic_data = Topic.objects.get(code=code, active=True)
     except Topic.DoesNotExist:
         return []
-    # TODO если будет 2 объекта
 
     gallery_list = Gallery.objects.filter(active=True, topic=topic_data).order_by('sort')
 

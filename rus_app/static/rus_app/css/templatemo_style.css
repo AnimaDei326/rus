@@ -111,10 +111,15 @@ form input[type="text"],
 form input[type="email"],
 form input[type="number"],
 form input[type="password"] {
-    background: #fff;
-    border: 1px solid #fff;
-    padding: 7px 10px;
+    /*background: #171717;*/
+    /*border: 1px solid #2a2a2a;*/
+    /*padding: 7px 10px;*/
     width: 60%;
+}
+
+form input[type="submit"]
+{
+    border-bottom: none !important;
 }
 
 form input[type="text"]:focus,
@@ -853,12 +858,14 @@ input, textarea {
     font-size: 14px;
     color: #838383;
     outline: 0;
-    border: 0;
-    border-bottom: 1px solid #b5c1c9;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid #b5c1c9 !important;
     width: 100%;
 }
 
-.contact-form textarea {
+.contact-form form textarea {
     height: 130px;
 }
 
@@ -873,6 +880,7 @@ input.button {
     font-weight: 700;
     padding-bottom: 27px;
     border: 0;
+    margin-top: 30px;
 }
 
 .site-footer {
@@ -915,12 +923,24 @@ ul.social li a {
 .topic {
     padding: 100px 15px 0 15px;
 }
-.blogs{
+
+.blogs {
     padding-bottom: 200px;
 }
-.page-title{
+
+.page-title {
     color: white;
     margin: 40px 0;
+}
+
+input, textarea {
+    margin-top: 10px !important;
+    background-color: #161616 !important;
+}
+
+.contact-form {
+    box-shadow: 1px 1px 10px black;
+    padding-bottom: 20px;
 }
 
 .topic-main-img {
@@ -928,7 +948,8 @@ ul.social li a {
     position: relative;
     text-align: center;
 }
-.topic-main-img img{
+
+.topic-main-img img {
     width: 100%;
 }
 

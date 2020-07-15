@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.urls import path
 from django.contrib import admin
+from rus_app.views.form import get_contact
 from rus_app.views.blogs_ import blogs_
 from rus_app.views.blog_ import blog_
 from rus_app.views.blog import blog
@@ -40,5 +41,6 @@ urlpatterns = [
     path('topic/<str:code>/', topic, name='topic'),
     path('topics_/', topics_, name='topics_'),
     path('topics/', topics, name='topics'),
+    path('get_contact/', get_contact, name='get_contact'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
