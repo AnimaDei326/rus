@@ -55,7 +55,6 @@
             });
             return false;
         });
-        $('#id_anti_email').type = 'email';
     });
 
 })(window, jQuery);
