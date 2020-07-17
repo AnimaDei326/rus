@@ -815,7 +815,7 @@ h6 {
 }
 
 .topic-texts {
-    margin: 40px 0;
+    margin: 40px 15px;
 }
 
 .navigation-link {
@@ -948,6 +948,20 @@ input, textarea {
     margin-top: 20px;
 }
 
+
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #161616 inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+    -webkit-text-fill-color: #838383 !important;
+}
+
 .topic-main-img {
     overflow: hidden;
     position: relative;
@@ -1008,12 +1022,14 @@ input, textarea {
     }
 }
 
-
 /*------------------------------------------------------
 	RESPONSIVE STYLES 
 --------------------------------------------------------*/
 @media (max-width: 991px) {
-
+    .topic {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 
     .main-menu, .bx-thumbnail-wrapper {
         display: none;
@@ -1075,6 +1091,8 @@ input, textarea {
 }
 
 @media (max-width: 767px) {
+
+
     .carousel {
         width: 100%;
     }
@@ -1102,6 +1120,7 @@ input, textarea {
 }
 
 @media (max-width: 575px) {
+
     .logo, .menu-burger {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;

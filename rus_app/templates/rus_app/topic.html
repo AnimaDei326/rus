@@ -1,9 +1,9 @@
 {% extends 'rus_app/base.html' %}
 {% block content %}
 
-    <div class="topic">
+    <div class="">
         <div class="content-section">
-            <div class="container">
+            <div class="topic container">
                 <div class="topic-main-img">
                     <img src="{{ topic.url }}">
                     <a class="all-topic-link" href="/topics/">
@@ -18,8 +18,8 @@
                         <p class="topic-description">{{ topic.description }}</p>
                     {% endif %}
                 </div>
-
-
+            </div>
+            <div class="container">
                 <div class="row" style="padding-left: 15px; padding-right: 15px;">
                     {% if gallery %}
                         <div class="card-columns">
