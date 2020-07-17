@@ -32,7 +32,7 @@
 
     $('a.toggle-menu').click(function () {
         $('.responsive .main-menu').toggle();
-        return false;
+        //return false;
     });
 
     $('.responsive .main-menu a').click(function () {
@@ -40,7 +40,7 @@
 
     });
 
-    $('.main-menu').singlePageNav();
+    // $('.main-menu').singlePageNav();
 
     $(document).ready(function test() {
         $('#form-contact').submit(function () { // catch the form's submit event
