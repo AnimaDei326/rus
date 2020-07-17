@@ -1,40 +1,47 @@
-{#<fieldset class="col-md-6 col-sm-6">#}
-{#    <input type="email" name="email" id="email" placeholder="Email">#}
-{#</fieldset>#}
-{#<fieldset class="col-md-12">#}
-{#    <input type="text" name="subject" id="subject" placeholder="Тема">#}
-{#</fieldset>#}
-{#<fieldset class="col-md-12">#}
-{#    <textarea name="comments" id="comments" placeholder="Сообщение"></textarea>#}
-{#</fieldset>#}
-{#<fieldset class="col-md-12">#}
-{#    <input type="submit" name="send" value="Отправить" id="submit" class="button">#}
-{#</fieldset>#}
-<form action="/get_contact/" method="post">
+<form id="form-contact" method="POST" action="/get_contact/">
     {% csrf_token %}
     {{ form.non_field_errors }}
 
-        {{ form.anti_name.errors }}
-        <fieldset class="col-md-6 col-sm-6">
-            {{ form.anti_name }}
-        </fieldset>
+    {{ form.anti_name.errors }}
+    <fieldset class="col-md-6 col-sm-6">
+        {{ form.anti_name }}
+    </fieldset>
 
-        {{ form.anti_email.errors }}
-        <fieldset class="col-md-6 col-sm-6">
-            {{ form.anti_email }}
-        </fieldset>
+    {{ form.anti_email.errors }}
+    <fieldset class="col-md-6 col-sm-6">
+        {{ form.anti_email }}
+    </fieldset>
 
-        {{ form.anti_subject.errors }}
-        <fieldset class="col-md-12">
-            {{ form.anti_subject }}
-        </fieldset>
+    {{ form.anti_subject.errors }}
+    <fieldset class="col-md-12">
+        {{ form.anti_subject }}
+    </fieldset>
 
-        {{ form.anti_message.errors }}
-        <fieldset class="col-md-12">
-             {{ form.anti_message }}
-        </fieldset>
+    {{ form.anti_message.errors }}
+    <fieldset class="col-md-12">
+        {{ form.anti_message }}
+    </fieldset>
 
     <fieldset class="col-md-12">
         <input type="submit" name="send" value="Отправить" id="submit" class="button">
     </fieldset>
 </form>
+<script>
+    window.setTimeout(function test() {
+     $('#form-contact').submit(function () { // catch the form's submit event
+                $.ajax({ // create an AJAX call...
+                    data: $(this).serialize(), // get the form data
+                    type: $(this).attr('method'), // GET or POST
+                    url: $(this).attr('action'), // the file to call
+                    success: function (response) { // on success..
+                        $('.contact-form').html(response);
+                        test();
+
+                    }
+                });
+                return false;
+            });
+            $('#id_anti_email').type = 'email';
+    }, 10)
+
+</script>

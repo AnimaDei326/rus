@@ -2,7 +2,7 @@ from django import forms
 
 
 class Contact(forms.Form):
-    anti_name = forms.CharField(max_length=100, required=True,
+    anti_name = forms.CharField(max_length=100,
                                 widget=forms.TextInput(attrs={'placeholder': 'Имя'}))
     anti_email = forms.EmailField(max_length=50, required=True,
                                   widget=forms.TextInput(attrs={'placeholder': 'E-mail'}))

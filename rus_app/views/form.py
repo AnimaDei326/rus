@@ -1,9 +1,12 @@
-from django.http import JsonResponse
+from django.http import HttpResponse
 from django.shortcuts import render
-
+from django.template.loader import render_to_string
 from ..forms.contact import Contact
 
 from django.views.decorators.csrf import csrf_exempt
+
+from ..models import FormContact
+
 
 @csrf_exempt
 def get_contact(request):
@@ -16,10 +19,16 @@ def get_contact(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            return JsonResponse({'success': True})
+            FormContact.objects.create(name=form.data['anti_name'], email=form.data['anti_email'],
+                                       subject=form.data['anti_subject'],
+                                       message=form.data['anti_message'])
 
+            rendered = render_to_string('rus_app/thank.html')
+            return HttpResponse(rendered)
     # if a GET (or any other method) we'll create a blank form
     else:
         form = Contact()
 
+    # rendered = render_to_string('rus_app/contact.html', context={'form': form})
+    # return HttpResponse(rendered)
     return render(request, 'rus_app/contact.html', {'form': form})

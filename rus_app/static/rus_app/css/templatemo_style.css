@@ -117,8 +117,7 @@ form input[type="password"] {
     width: 60%;
 }
 
-form input[type="submit"]
-{
+form input[type="submit"] {
     border-bottom: none !important;
 }
 
@@ -941,6 +940,12 @@ input, textarea {
 .contact-form {
     box-shadow: 1px 1px 10px black;
     padding-bottom: 20px;
+}
+
+.thank-you {
+    color: white;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .topic-main-img {

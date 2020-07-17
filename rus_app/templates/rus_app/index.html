@@ -31,146 +31,128 @@
     </div>
 
 
-{#<div id="services" class="content-section">#}
-{#    <div class="container">#}
-{#        <div class="row">#}
-{#            <div class="col-md-3 col-sm-6">#}
-{#                <div class="service-item">#}
-{#                    <span class="service-icon first"></span>#}
-{#                    <h3>Responsive Layout</h3>#}
-{#                    <p>Sprint is free CSS template based on HTML5 and Bootstrap. You can feel free to download, modify#}
-{#                        and use this for your website.</p>#}
-{#                </div> <!-- /.service-item -->#}
-{#            </div> <!-- /.col-md-3 -->#}
-{#            <div class="col-md-3 col-sm-6">#}
-{#                <div class="service-item">#}
-{#                    <span class="service-icon second"></span>#}
-{#                    <h3>Mobile Friendly</h3>#}
-{#                    <p>You may want to visit <a rel="nofollow" href="https://www.toocss.com">Too CSS blog</a> to see#}
-{#                        latest collections of free CSS templates for your websites. Etiam porttitor nibh et felis#}
-{#                        molestie fermentum.</p>#}
-{#                </div> <!-- /.service-item -->#}
-{#            </div> <!-- /.col-md-3 -->#}
-{#            <div class="col-md-3 col-sm-6">#}
-{#                <div class="service-item">#}
-{#                    <span class="service-icon third"></span>#}
-{#                    <h3>Highest Standard</h3>#}
-{#                    <p>Phasellus mauris risus, sodales vitae finibus at, auctor et augue. Fusce est neque, ornare sit#}
-{#                        amet fringilla eget, tincidunt vel arcu.</p>#}
-{#                </div> <!-- /.service-item -->#}
-{#            </div> <!-- /.col-md-3 -->#}
-{#            <div class="col-md-3 col-sm-6">#}
-{#                <div class="service-item">#}
-{#                    <span class="service-icon fourth"></span>#}
-{#                    <h3>Quick Support</h3>#}
-{#                    <p>Ut congue interdum pharetra facilisi. Aenean consectetur pellentesque mauris nec ornare. Nam#}
-{#                        tortor justo, rutrum ut condimentum.</p>#}
-{#                </div> <!-- /.service-item -->#}
-{#            </div> <!-- /.col-md-3 -->#}
-{#        </div> <!-- /.row -->#}
-{#    </div> <!-- /.container -->#}
-{#</div> <!-- /#services -->#}
+    {#<div id="services" class="content-section">#}
+    {#    <div class="container">#}
+    {#        <div class="row">#}
+    {#            <div class="col-md-3 col-sm-6">#}
+    {#                <div class="service-item">#}
+    {#                    <span class="service-icon first"></span>#}
+    {#                    <h3>Responsive Layout</h3>#}
+    {#                    <p>Sprint is free CSS template based on HTML5 and Bootstrap. You can feel free to download, modify#}
+    {#                        and use this for your website.</p>#}
+    {#                </div> <!-- /.service-item -->#}
+    {#            </div> <!-- /.col-md-3 -->#}
+    {#            <div class="col-md-3 col-sm-6">#}
+    {#                <div class="service-item">#}
+    {#                    <span class="service-icon second"></span>#}
+    {#                    <h3>Mobile Friendly</h3>#}
+    {#                    <p>You may want to visit <a rel="nofollow" href="https://www.toocss.com">Too CSS blog</a> to see#}
+    {#                        latest collections of free CSS templates for your websites. Etiam porttitor nibh et felis#}
+    {#                        molestie fermentum.</p>#}
+    {#                </div> <!-- /.service-item -->#}
+    {#            </div> <!-- /.col-md-3 -->#}
+    {#            <div class="col-md-3 col-sm-6">#}
+    {#                <div class="service-item">#}
+    {#                    <span class="service-icon third"></span>#}
+    {#                    <h3>Highest Standard</h3>#}
+    {#                    <p>Phasellus mauris risus, sodales vitae finibus at, auctor et augue. Fusce est neque, ornare sit#}
+    {#                        amet fringilla eget, tincidunt vel arcu.</p>#}
+    {#                </div> <!-- /.service-item -->#}
+    {#            </div> <!-- /.col-md-3 -->#}
+    {#            <div class="col-md-3 col-sm-6">#}
+    {#                <div class="service-item">#}
+    {#                    <span class="service-icon fourth"></span>#}
+    {#                    <h3>Quick Support</h3>#}
+    {#                    <p>Ut congue interdum pharetra facilisi. Aenean consectetur pellentesque mauris nec ornare. Nam#}
+    {#                        tortor justo, rutrum ut condimentum.</p>#}
+    {#                </div> <!-- /.service-item -->#}
+    {#            </div> <!-- /.col-md-3 -->#}
+    {#        </div> <!-- /.row -->#}
+    {#    </div> <!-- /.container -->#}
+    {#</div> <!-- /#services -->#}
 
-<div id="products" class="content-section">
-    <div class="container">
-        <div class="row">
+    <div id="products" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="section-title">Галерея</h1>
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+            <div class="row" style="padding-left: 15px; padding-right: 15px;">
+                <div class="card-columns">
+                    {% for item in topic %}
+                        <div class="card">
+                            <a href="/topic/{{ item.code }}/">
+                                <img class="card-img" src="{{ item.url }}" alt="Card image cap">
+                                {#                        <div class="card-body">#}
+                                {% if item.title %}
+                                    <h5 class="card-title">{{ item.title }}</h5>
+                                {% endif %}
+                                {#                            {% if item.description %}#}
+                                {#                                <p class="card-text">{{ item.description }}</p>#}
+                                {#                            {% endif %}#}
+                                {#                        </div>#}
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div> <!-- /.row -->
             <div class="col-md-12 text-center">
-                <h1 class="section-title">Галерея</h1>
-            </div> <!-- /.col-md-12 -->
-        </div> <!-- /.row -->
-        <div class="row" style="padding-left: 15px; padding-right: 15px;">
-            <div class="card-columns">
-                {% for item in topic %}
-                    <div class="card">
-                        <a href="/topic/{{ item.code }}/">
-                            <img class="card-img" src="{{ item.url }}" alt="Card image cap">
-                            {#                        <div class="card-body">#}
-                            {% if item.title %}
+                <a href="/topics/">
+                    <button class="button-green">Все альбомы</button>
+                </a>
+            </div>
+        </div> <!-- /.container -->
+    </div> <!-- /#products -->
+
+
+    <div id="services" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="section-title">Блог</h1>
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+            <div class="row" style="padding-left: 15px; padding-right: 15px;">
+                <div class="card-columns">
+                    {% for item in blog %}
+                        <div class="card">
+                            <a href="/blog/{{ item.code }}/">
+                                <img class="card-img" src="{{ item.picture }}" alt="Card image">
+                                {#                        <div class="card-img-overlay">#}
                                 <h5 class="card-title">{{ item.title }}</h5>
-                            {% endif %}
-                            {#                            {% if item.description %}#}
-                            {#                                <p class="card-text">{{ item.description }}</p>#}
-                            {#                            {% endif %}#}
-                            {#                        </div>#}
-                        </a>
-                    </div>
-                {% endfor %}
-            </div>
-        </div> <!-- /.row -->
-        <div class="col-md-12 text-center">
-            <a href="/topics/">
-                <button class="button-green">Все альбомы</button>
-            </a>
-        </div>
-    </div> <!-- /.container -->
-</div> <!-- /#products -->
+                                {#                            <p class="card-text">{{ item.preview_text }}</p>#}
+                                {#                            <p>{{ item.last_updated }}</p>#}
+                                {#                        </div>#}
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /#product-promotion -->
 
 
-<div id="services" class="content-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1 class="section-title">Блог</h1>
-            </div> <!-- /.col-md-12 -->
-        </div> <!-- /.row -->
-        <div class="row" style="padding-left: 15px; padding-right: 15px;">
-            <div class="card-columns">
-                {% for item in blog %}
-                    <div class="card">
-                        <a href="/blog/{{ item.code }}/">
-                            <img class="card-img" src="{{ item.picture }}" alt="Card image">
-                            {#                        <div class="card-img-overlay">#}
-                            <h5 class="card-title">{{ item.title }}</h5>
-                            {#                            <p class="card-text">{{ item.preview_text }}</p>#}
-                            {#                            <p>{{ item.last_updated }}</p>#}
-                            {#                        </div>#}
-                        </a>
-                    </div>
-                {% endfor %}
-            </div>
+    <div id="contact" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="section-title">Контакты</h1>
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+            <div class="row">
 
-        </div> <!-- /.row -->
-    </div> <!-- /.container -->
-</div> <!-- /#product-promotion -->
+                <div class="col-md-offset-2 col-md-8 text-center">
 
+                    <div class="row contact-form">
 
-<div id="contact" class="content-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1 class="section-title">Контакты</h1>
-            </div> <!-- /.col-md-12 -->
-        </div> <!-- /.row -->
-        <div class="row">
-{#            <div class="col-md-offset-2 col-md-8 text-center bigger-text">#}
-{#                <p>Если желаете связаться, заполните форму</p>#}
-{#            </div>#}
+                            {{ form_contact|safe }}
 
-            <div class="col-md-offset-2 col-md-8 text-center">
+                    </div> <!-- /.contact-form -->
 
-                <div class="row contact-form">
-                    {{ form_contact|safe }}
-{#                    <form>#}
-{#                    <fieldset class="col-md-6 col-sm-6">#}
-{#                        <input id="antiname" type="text" name="antiname" placeholder="Имя">#}
-{#                    </fieldset>#}
-{#                    <fieldset class="col-md-6 col-sm-6">#}
-{#                        <input type="email" name="email" id="email" placeholder="Email">#}
-{#                    </fieldset>#}
-{#                    <fieldset class="col-md-12">#}
-{#                        <input type="text" name="subject" id="subject" placeholder="Тема">#}
-{#                    </fieldset>#}
-{#                    <fieldset class="col-md-12">#}
-{#                        <textarea name="comments" id="comments" placeholder="Сообщение"></textarea>#}
-{#                    </fieldset>#}
-{#                    <fieldset class="col-md-12">#}
-{#                        <input type="submit" name="send" value="Отправить" id="submit" class="button">#}
-{#                    </fieldset>#}
-{#</form>#}
-                </div> <!-- /.contact-form -->
-
-            </div> <!-- /.col-md-6 -->
-        </div> <!-- /.row -->
-    </div> <!-- /.container -->
-</div> <!-- /#products -->
+                </div> <!-- /.col-md-6 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /#products -->
 {% endblock %}
