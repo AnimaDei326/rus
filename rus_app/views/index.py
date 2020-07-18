@@ -6,7 +6,7 @@ import json
 
 def index(request):
     response_gallery = requests.get('http://{}/gallery_'.format(settings.DOMAIN))
-    response_blog = requests.get('http://{}/blogs_'.format(settings.DOMAIN))
+    response_blog = requests.get('http://{}/blogs_/?batch_size=3&is_main_page=true'.format(settings.DOMAIN))
     gallery_list = json.loads(response_gallery.text)['gallery']
     topic_list = json.loads(response_gallery.text)['topics']
     blog_list = json.loads(response_blog.text)['blogs']
