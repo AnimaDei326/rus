@@ -100,7 +100,8 @@
         }
     }
 
-    window.addEventListener('scroll', add_more);
-    // TODO vem если только на странице блога
+    if (document.URL.includes('/blogs')){
+        window.addEventListener('scroll', add_more);
+    }
 
 })(window, jQuery);
