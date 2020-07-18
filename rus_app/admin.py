@@ -7,20 +7,21 @@ from .models import FormContact
 
 @admin.register(Gallery)
 class GalleryAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['title', 'active', 'sort', 'show_in_slider', ]
 
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['title', 'active', 'sort', 'show_on_main_page', ]
 
 
 @admin.register(Topic)
 class TopicAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['title', 'active', 'sort', 'show_on_main_page', ]
 
 
 @admin.register(FormContact)
 class FormContactAdmin(admin.ModelAdmin):
     readonly_fields = ['date_create', ]
-    list_display = ['subject', 'done', 'date_create', ]
+    list_display = ['email', 'subject', 'done', 'date_create', ]
+
