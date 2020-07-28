@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>Rustam</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    {% load static %}
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'rus/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'rus/css/normalize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'rus/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'rus/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'rus/css/templatemo_misc.css' %}">
+    <link rel="stylesheet" href="{% static 'rus/css/templatemo_style.css' %}">
+    <link rel="stylesheet" href="{% static 'rus/css/jquery.fancybox.min.css' %}">
+
+    <script src="{% static 'rus/js/vendor/modernizr-2.6.2.min.js' %}"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+    improve your experience.</p>
+<![endif]-->
+<div id="front">
+    <div class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-6 logo">
+                    <div id="templatemo_logo">
+                        <h1><a href="/">Rustam</a></h1>
+                    </div> <!-- /.logo -->
+                </div> <!-- /.col-md-4 -->
+                <div class="col-md-8 col-sm-6 col-xs-6 menu-burger">
+                    <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+                    <div class="main-menu">
+                        <ul>
+                            <li><a href="/">Главная</a></li>
+                            <li><a href="/topics/">Галерея</a></li>
+                            <li><a href="/blogs/">Блог</a></li>
+                            <li><a href="/#form-contact">Контакты</a></li>
+                        </ul>
+                    </div> <!-- /.main-menu -->
+                </div> <!-- /.col-md-8 -->
+            </div> <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="responsive">
+                        <div class="main-menu">
+                            <ul>
+                                <li><a href="/">Главная</a></li>
+                                <li><a href="/topics/">Галерея</a></li>
+                                <li><a href="/blogs/">Блог</a></li>
+                                <li><a href="/#form-contact">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.container -->
+    </div> <!-- /.site-header -->
+</div> <!-- /#front -->
+<div style="background-color: #161616;">
+    {% block content %}
+    {% endblock %}
+    <div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6">
+                    <span id="copyright">
+                   	Copyright &copy; 2020 <a href="#">Rustam</a></span>
+
+                </div> <!-- /.col-md-6 -->
+                <div class="col-md-4 col-sm-6">
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                        <li><a href="#" class="fa fa-rss"></a></li>
+                    </ul>
+                </div> <!-- /.col-md-6 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+
+</div>
+<script src="{% static 'rus/js/vendor/jquery-1.10.1.min.js' %}"></script>
+<script src="{% static 'rus/js/jquery.easing-1.3.js' %}"></script>
+<script src="{% static 'rus/js/bootstrap.js' %}"></script>
+<script src="{% static 'rus/js/plugins.js' %}"></script>
+<script src="{% static 'rus/js/main.js' %}"></script>
+<script src="{% static 'rus/js/jquery.fancybox.min.js' %}"></script>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
