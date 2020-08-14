@@ -708,6 +708,7 @@ h6 {
     overflow: hidden;
     transition: box-shadow .3s ease-in-out;
     border: none !important;
+    height: 250px;
 }
 
 .card:hover img {
@@ -750,7 +751,7 @@ h6 {
 
 .card-img, .card-img-detail {
     /*width: 250px;*/
-    height: 250px;
+    /* height: 250px; */
     object-fit: cover;
     object-position: 50% 50%;
 }
@@ -886,7 +887,7 @@ input.button {
     margin-top: 120px;
     background-color: #26b864;
     color: white;
-    padding: 25px 0;
+    padding: 40px 0;
 }
 
 .site-footer a {
